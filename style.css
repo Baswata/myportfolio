@@ -1,28 +1,23 @@
-/* Reset some default styles */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styling */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    color: white;
+    padding: 1rem;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 nav ul li {
@@ -30,7 +25,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -39,133 +34,87 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Section Styling */
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
 section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+footer {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
 }
 
-/* About Section */
-#about h1 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#about p {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-/* Projects Section */
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project a {
+.btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
-.project a:hover {
-    background-color: #555;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-/* Skills Section */
-#skills ul {
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* About Me Section with Image and Info Side-by-Side */
+.about-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
+    align-items: center;
+    gap: 20px;
 }
 
-#skills ul li {
-    background-color: #f4f4f4;
-    margin: 5px;
-    padding: 10px 15px;
-    border-radius: 3px;
+.about-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
-#contact form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+.about-info {
+    flex: 1;
 }
 
-#contact label {
-    margin: 10px 0 5px;
-}
-
-#contact input,
-#contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-#contact button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background-color: #555;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .project-container {
+    .about-container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
+    .about-container img {
+        margin-bottom: 10px;
     }
 }
